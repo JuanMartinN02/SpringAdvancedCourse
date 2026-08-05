@@ -19,10 +19,15 @@ public class HelloWorldConfiguration {
         return 20;
     }
 
-    @Bean
+    @Bean(name = "personita")
     public Person person(){
         var person = new Person(name(), age());
         return person;
+    }
+
+    @Bean
+    public Person personCustom(String name, int age){
+        return new Person(name, age);
     }
 
 }
