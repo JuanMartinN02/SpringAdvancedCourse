@@ -17,6 +17,7 @@ public class HelloWorld {
         System.out.println(context.getBean("personCustom"));
         // Won't give exception because we defined of the Person beans as primary
         System.out.println(context.getBean(Person.class));
+        System.out.println(context.getBean("jobQualifier"));
 
         // We can look at all the beans for this context
         context.getBeanDefinitionNames();

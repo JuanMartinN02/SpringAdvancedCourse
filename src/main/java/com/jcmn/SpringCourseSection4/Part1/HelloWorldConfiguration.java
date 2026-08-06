@@ -1,11 +1,14 @@
 package com.jcmn.SpringCourseSection4.Part1;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 // POJOs
 record Person (String name, int age){}
+
+record Job (Person person, String jobTittle){}
 
 // Configure the things that we want Spring to manage (beans)
 @Configuration
@@ -31,6 +34,18 @@ public class HelloWorldConfiguration {
     @Bean
     public Person personCustom(String name, int age){ // Finds beans with matching names and wires the dependencies
         return new Person(name, age);
+    }
+
+    @Bean
+    @Qualifier("PersonaCustomQualifier") // Lets us use a different bean than the primary
+    public Person personQualifier(){
+        return new Person("Qualifier", 26);
+    }
+
+    // Solving the problem of having multiple beans with same POJO
+    @Bean
+    public Job jobQualifier(@Qualifier("PersonaCustomQualifier") Person person){
+        return new Job(person, "Boss");
     }
 
 }
