@@ -1,9 +1,13 @@
 package com.jcmn.Section7GettingStarted;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner {
     private Game game;
 
-    public GameRunner(Game game) {
+    public GameRunner(@Qualifier("SuperMarioGameQualifier") Game game) {
         this.game = game;
     }
 

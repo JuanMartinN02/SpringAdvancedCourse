@@ -1,5 +1,7 @@
 package com.jcmn.Section7GettingStarted;
 
+import org.springframework.stereotype.Component;
+
 public class Game{
     private String console;
     private String name;
