@@ -1,4 +1,4 @@
-package com.jcmn.SpringCourseSection4;
+package com.jcmn.Section4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

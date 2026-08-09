@@ -1,4 +1,4 @@
-package com.jcmn.SpringCourseSection4.Part1;
+package com.jcmn.Section4.Part1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

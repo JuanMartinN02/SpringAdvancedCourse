@@ -1,4 +1,4 @@
-package com.jcmn.SpringCourseSection4;
+package com.jcmn.Section4;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
