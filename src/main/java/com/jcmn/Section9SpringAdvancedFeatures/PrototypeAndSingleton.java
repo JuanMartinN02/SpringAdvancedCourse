@@ -15,7 +15,7 @@ class NormalClass{
 @Component
 // ConfigurableBeanFactory.SCOPE_PROTOTYPE forces the creation of a new instance of the
 // class when invoked, normally Spring could reuse the same instance of a class
-// SINGLETON would have one Object instance per Spring IOC Container!
+// SINGLETON would have one Object instance per Spring IOC Container. It's the DEFAULT OPTION.
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 class PrototypeClass{
 
